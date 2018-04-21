@@ -9,7 +9,7 @@
     "dll": "webpack --config webpack.dll.config.js --mode production",
     "precommit": "npm run tslint",
     "prepush": "npm run tslint",
-    "tslint": "tslint -p tsconfig.json **/*/*.tsx -c tslint.json --exclude **/*.d.ts --fix",
+    "tslint": "tslint -p tsconfig.json src/**/*.tsx -c tslint.json --exclude **/*.d.ts --fix",
     "stylelint": "stylelint **/*.scss --config .stylelintrc --fix"
   },
   "engines": {
