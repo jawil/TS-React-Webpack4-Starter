@@ -6,7 +6,10 @@
   "scripts": {
     "start": "cross-env NODE_ENV=dev webpack-dev-server",
     "build": "cross-env NODE_ENV=prod webpack --display-used-exports --hide-modules",
-    "dll": "webpack --config webpack.dll.config.js --mode production"
+    "dll": "webpack --config webpack.dll.config.js --mode production",
+    "precommit": "npm run lint",
+    "prepush": "lint",
+    "lint": "tslint ./src/**/*"
   },
   "engines": {
     "node": ">=8.5.0",
@@ -15,9 +18,7 @@
   "directories": {
     "test": "test"
   },
-  "pre-commit": [
-    "lint"
-  ],
+  "pre-commit": ["lint"],
   "dependencies": {
     "classnames": "^2.2.5",
     "core-decorators": "^0.20.0",
@@ -67,6 +68,7 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "fork-ts-checker-webpack-plugin": "^0.4.1",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^0.14.3",
     "less": "^3.0.1",
     "less-loader": "^4.1.0",
     "mini-css-extract-plugin": "^0.4.0",
