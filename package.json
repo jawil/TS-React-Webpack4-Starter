@@ -9,7 +9,7 @@
     "dll": "webpack --config webpack.dll.config.js --mode production",
     "precommit": "npm run lint",
     "prepush": "lint",
-    "lint": "tslint ./src/**/*"
+    "lint": "tslint ./src/**/*.tsx"
   },
   "engines": {
     "node": ">=8.5.0",
