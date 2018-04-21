@@ -29,5 +29,5 @@ export default Hello;
 // helpers
 
 function getExclamationMarks(numChars: number) {
-  return Array(numChars +1).join('!');
+  return Array(numChars + 1).join('!');
 }

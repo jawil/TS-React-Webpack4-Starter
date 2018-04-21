@@ -7,10 +7,10 @@
     "start": "cross-env NODE_ENV=dev webpack-dev-server",
     "build": "cross-env NODE_ENV=prod webpack --display-used-exports --hide-modules",
     "dll": "webpack --config webpack.dll.config.js --mode production",
-    "precommit": "npm run tslint",
+    "precommit": "npm run tslint && npm run stylelint",
     "prepush": "npm run tslint",
     "tslint": "tslint -p tsconfig.json src/**/*.tsx -c tslint.json --exclude **/*.d.ts --fix",
-    "stylelint": "stylelint **/*.scss --config .stylelintrc --fix"
+    "stylelint": "stylelint src/**/*.scss --config .stylelintrc --fix"
   },
   "engines": {
     "node": ">=8.5.0",
