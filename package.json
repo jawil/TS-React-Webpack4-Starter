@@ -8,9 +8,9 @@
     "build": "cross-env NODE_ENV=prod webpack --display-used-exports --hide-modules",
     "dll": "webpack --config webpack.dll.config.js --mode production",
     "precommit": "npm run stylelint",
-    "prepush": "stylelint",
+    "prepush": "lint",
     "tslint": "tslint -p tsconfig.json **/*/*.tsx -c tslint.json --exclude **/*.d.ts",
-    "stylelint": "stylelint src/**/*.scss --fixed"
+    "stylelint": "stylelint src/**/*.scss --config .stylelintrc"
   },
   "engines": {
     "node": ">=8.5.0",
@@ -19,9 +19,7 @@
   "directories": {
     "test": "test"
   },
-  "pre-commit": [
-    "lint"
-  ],
+  "pre-commit": ["lint"],
   "dependencies": {
     "classnames": "^2.2.5",
     "core-decorators": "^0.20.0",
