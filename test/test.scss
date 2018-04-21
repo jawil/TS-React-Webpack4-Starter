@@ -9,7 +9,7 @@
     transform: translateX(-50%);
   }
 
-  &:after {
+  &::after {
     color: green;
   }
 }
