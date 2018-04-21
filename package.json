@@ -10,7 +10,7 @@
     "precommit": "npm run tslint && npm run stylelint",
     "prepush": "npm run tslint",
     "tslint": "tslint -p tsconfig.json src/**/*.tsx -c tslint.json --exclude **/*.d.ts --fix",
-    "stylelint": "stylelint src/**/*.scss --config .stylelintrc --fix"
+    "stylelint": "stylelint **/src/**/*.scss --config .stylelintrc --fix"
   },
   "engines": {
     "node": ">=8.5.0",
