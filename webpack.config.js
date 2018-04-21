@@ -2,11 +2,9 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const WebpackVersionPlugin = require('webpack-version-plugin');
 const WebpackMerge = require('webpack-merge');
-const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 const ROOT_PATH = path.resolve(__dirname);
 const APP_PATH = path.resolve(ROOT_PATH, 'src');
@@ -90,16 +88,6 @@ module.exports = WebpackMerge(
 
       new AddAssetHtmlPlugin({
         filepath: path.resolve(ROOT_PATH, 'vendor/*.dll.js')
-      }),
-
-      new StyleLintPlugin(),
-
-      new ForkTsCheckerWebpackPlugin({
-        checkSyntacticErrors: true,
-        tsconfig: path.resolve(ROOT_PATH, 'tsconfig.json'),
-        tslint: path.resolve(ROOT_PATH, 'tslint.json'),
-        watch: ['./src/**/*.tsx'],
-        ignoreLints: ['no-console', 'object-literal-sort-keys', 'quotemark']
       }),
 
       new webpack.DllReferencePlugin({

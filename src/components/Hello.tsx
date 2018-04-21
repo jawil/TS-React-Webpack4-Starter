@@ -1,6 +1,5 @@
 import * as React from 'react';
 import './Hello.scss';
-
 export interface Props {
   name: string;
   enthusiasmLevel?: number;
