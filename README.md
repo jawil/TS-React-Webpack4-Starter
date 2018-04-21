@@ -1,3 +1,6 @@
-# webpack 4
+## A starter template example for TypeScript React and Webpack4
+### step 1:
+`npm run dll`
 
-更新于2018-04-15 23:05
+### step 2:
+`npm start` or `npm run build`
